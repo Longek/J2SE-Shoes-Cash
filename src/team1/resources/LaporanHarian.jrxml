@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LaporanHarian" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="522dafc0-fb62-42e8-9a34-1fb733648b4e">
+	<property name="ireport.zoom" value="1.0000000000000044"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[Select * from profit]]>
+	</queryString>
+	<field name="no" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="trans_today" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="trans_total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sold_today" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sold_total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="admission_fee_today" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="admission_fee_total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="capital" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="income_today" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="income_total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="82" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="83ca9b21-095d-4adc-8259-549b519bd12d" x="0" y="0" width="802" height="79" forecolor="#FFFFFF" backcolor="#006600"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="a359192f-5490-4f47-8ca1-38a42f6fbda7" x="2" y="0" width="555" height="29" forecolor="#FFFFFF"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SHOES CASH APPLICATION]]></text>
+			</staticText>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement uuid="68c31af8-8209-4d78-84b1-821aadd60d1c" x="3" y="58" width="489" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5c2780d0-ea67-4c1e-9aa6-ebaa1dc18ce6" x="2" y="29" width="196" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Laporan Harian]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="11" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="cc4ac68f-d97e-42a6-ae88-a0ceea26c70b" x="0" y="0" width="783" height="20" backcolor="#CCCCCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="4e7df890-776b-4879-a816-c9662d354e87" x="0" y="1" width="82" height="20" backcolor="#CCCCCC"/>
+				<textElement/>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6a20b61a-8391-4bfc-a2b8-58fb0f51f0d7" x="83" y="1" width="49" height="20" backcolor="#CCCCCC"/>
+				<textElement/>
+				<text><![CDATA[Transaksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fa5d588c-70f7-47ff-9ffc-4ef2899cbf05" x="132" y="1" width="76" height="20" backcolor="#CCCCCC"/>
+				<textElement/>
+				<text><![CDATA[Total Transaksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="08f1ae22-90e2-43ed-b076-a0bd5dd84283" x="209" y="1" width="72" height="20" backcolor="#CCCCCC"/>
+				<textElement/>
+				<text><![CDATA[Sepatu Terjual]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c8b5bb72-a1cd-4014-8057-e8ce84196bfe" x="284" y="1" width="68" height="20" backcolor="#CCCCCC"/>
+				<textElement/>
+				<text><![CDATA[Total Terjual]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="54d9ce9f-7985-4bd6-ae0d-b632183ac578" x="357" y="0" width="76" height="20" backcolor="#CCCCCC"/>
+				<textElement/>
+				<text><![CDATA[Uang Masuk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1bc46cd8-64a0-4e11-babf-69d7cb936b61" x="434" y="1" width="82" height="20" backcolor="#CCCCCC"/>
+				<textElement/>
+				<text><![CDATA[Total Uang Masuk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="145ee606-ada4-4fb1-bc7f-1979efc9caa6" x="518" y="1" width="72" height="20" backcolor="#CCCCCC"/>
+				<textElement/>
+				<text><![CDATA[Modal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="158d42d0-42d7-4fac-b808-a8b9cca430c7" x="592" y="1" width="88" height="20" backcolor="#CCCCCC"/>
+				<textElement/>
+				<text><![CDATA[Pendapatan ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f5381779-e6a7-4b98-9e64-2d011c6f86ab" x="683" y="1" width="100" height="20" backcolor="#CCCCCC"/>
+				<textElement/>
+				<text><![CDATA[Total Pendapatan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement uuid="a4092a19-6641-4bbd-a369-822b63ad7a35" x="0" y="0" width="82" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{date}.toString()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2e0ae102-2d10-4932-bccf-e32aab5fe38c" x="83" y="0" width="49" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{trans_today}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="32f5d959-0a08-476c-9378-98682926e3ad" x="132" y="0" width="76" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{trans_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ba769f72-2dd1-4620-805a-bbc2885637fd" x="209" y="1" width="72" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{sold_today}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5ab2d277-8495-4689-a775-e4638f804409" x="284" y="1" width="68" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{sold_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7c276836-7aca-42d6-b1fd-04508d442323" x="357" y="0" width="76" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{admission_fee_today}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4f8d4e2b-736a-4558-bf7e-b16ee20f8197" x="434" y="1" width="82" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{admission_fee_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7a4b9455-dac2-4487-b710-6b2a074073d2" x="518" y="1" width="72" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{capital}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a52598d2-59e8-4365-9c67-f290e5e9477e" x="592" y="1" width="88" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{income_today}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5596154a-d481-4d42-a99a-b29e6e834bc8" x="683" y="1" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{income_total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement uuid="395f764a-9418-4eb4-b037-eafe5de939a9" x="695" y="6" width="59" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="528cce9e-aa07-44ac-b3f2-c280fd70c001" x="761" y="6" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="6" splitType="Stretch"/>
+	</summary>
+</jasperReport>
