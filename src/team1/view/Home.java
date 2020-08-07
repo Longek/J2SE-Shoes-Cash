@@ -5449,7 +5449,7 @@ try {
             String q= "SELECT date, income_today,admission_fee_today FROM `profit`";
             JDBCCategoryDataset dataset = new JDBCCategoryDataset(con, q);
             JFreeChart chart = ChartFactory.createLineChart("Query Chart","Tanggal","Pendapatan", dataset, PlotOrientation.VERTICAL, false, false, false);
-            CategoryPlot catPlot = chart.getCategoryPlot();
+//            CategoryPlot catPlot = chart.getCategoryPlot();
             ChartPanel chartPanel=new ChartPanel(chart);
             panelMyChart.removeAll();
             panelMyChart.add(chartPanel, BorderLayout.CENTER);
